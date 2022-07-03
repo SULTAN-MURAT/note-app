@@ -40,7 +40,7 @@ if(note.text===""||note.color===""){
         <div className="note-form">
           <div className="text-area-container">
             <textarea
-              cols="40"
+              cols="25"
               rows="1"
               name="text"
               placeholder="Enter your note here..."
