@@ -5,9 +5,10 @@ import { filterNotes } from "../redux/noteSlice";
 function Header() {
   const dispatch = useDispatch();
   const [searchText, setSearchText] = useState("");
+  
   useEffect(() => {
     dispatch(filterNotes(searchText));
-  }, [searchText]);
+  }, [searchText,dispatch]);
 
   const handleInput = (e) => {
     setSearchText(e.target.value);
