@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Nunito", "Segoe UI", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #d2d2d2;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #808080;
+  width: 80%;
+}
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search-input {
+  margin: 20px;
+}
+.search-input input {
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 5px 25px;
+  width: 250px;
+  height: 30px;
+}
+
+.search-input input::placeholder {
+  font-size: 18px;
+  font-weight: 500;
+  color: #808080;
+  line-height: 1.5em;
+}
+
+.search-input input:hover {
+  box-shadow: 1px 1px 12px 1px #b3b0b0;
+}
+.search-input input:focus-within {
+  box-shadow: 1px 1px 12px 1px #b3b0b0;
+  outline: none;
+}
+.form{
+  width: 80%;
+  display: flex;
+}
+
+.note-form {
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  margin: 20px 0;
+  height: 160px;
+  background-color: #fff;
+}
+
+
+.text-area-container textarea {
+  background-color: #fff;
+  outline: none;
+  border: none;
+  color: #504b4b;
+  resize: none;
+  font-size: 16px;
+  padding: 0;
+}
+
+.note-form textarea::placeholder {
+  color: #504b4b;
+}
+
+/* radio custom button*/
+
+input[type="radio"] {
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  content: none;
+  outline: none;
+  margin: 2px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+input[type="radio"]:checked {
+  appearance: none;
+  outline: none;
+  padding: 0;
+  content: none;
+  border: none;
+}
+
+#magenta {
+  background-color: #d85883;
+}
+
+#purple {
+  background-color: #ba68c8;
+}
+
+#yellow {
+  background-color: #ffd54f;
+}
+
+#seaBlue {
+  background-color: #4fc3f7;
+}
+
+#green {
+  background-color: #aed581;
+}
+
+input[type="radio"]:checked::before {
+  position: absolute;
+  color: gray !important;
+  content: "\00A0\2713\00A0" !important;
+  border: 1px solid #d3d3d3;
+  font-weight: bolder;
+  font-size: 21px;
+  outline: none;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+.add-button {
+  background-color: #44c767;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: #fff;
+  border: none;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
+.note-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+}
+.note{
+  text-align: center;
+  padding: 5px;
+  width:220px;
+  margin: 10px;
+  height: auto;
+}
