@@ -21,6 +21,17 @@ export const notesSlice = createSlice({
       state.filteredItems.push(action.payload);
       localStorage.setItem("filtered-local",JSON.stringify(state.filteredItems));
     },
+     deleteNote: (state, action) => {
+      const { id } = action.payload;
+      const index = state.items.findIndex((item) => item.id === id);
+      state.items.splice(index, 1);
+      state.filteredItems.splice(index, 1);
+      localStorage.setItem("note-local", JSON.stringify(state.items));
+      localStorage.setItem(
+        "filtered-local",
+        JSON.stringify(state.filteredItems)
+      );
+    },
     filterNotes: (state, action) => {
       const filteredItems = state.items.filter((item) =>
       item.text.toLowerCase().includes(action.payload.toLowerCase())
@@ -35,6 +46,6 @@ export const notesSlice = createSlice({
 });
 export const noteSelector = (state) => state.notes.items;
 export const filteredNotesSelector=(state) => state.notes.filteredItems;
-export const { listNotes, addNote, filterNotes } = notesSlice.actions;
+export const { addNote, deleteNote, filterNotes } = notesSlice.actions;
 
 export default notesSlice.reducer;
